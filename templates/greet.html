@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %} Customized Greeting Page Page {% endblock %}
+
+{% block navbar %} Home Page {% endblock %}
+
+{% block content %}
+    <h1>Welcome:</h1>
+    <p>Hi {{displayname}}, thanks for visiting.</p>
+    {% if compliments  %}
+        <p> Survey says you are:</p>
+            <ul>
+                {% for value in ran_compliments %}
+                    <li>{{value}}</li>
+            
+                {% endfor %}
+            </ul>
+    {% endif %}
+{% endblock %}

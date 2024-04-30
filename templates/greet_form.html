@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %} Greeting Form Page {% endblock %}
+
+{% block navbar %} Home Page {% endblock %}
+
+{% block content %}
+    <h1>Greet Request</h1>
+    <p>Let us know how you would like to be greeted...</p>
+    <form action="/greet">
+        <input type="text" placeholder="Your name" name="displayname">
+        <input type="checkbox" value="checked" name="compliments" id="chbox">
+        <label for="chbox">Multiple Compliments?</label>
+        <button type="submit">Submit</button>
+
+    </form>
+{% endblock %}
